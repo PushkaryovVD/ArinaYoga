@@ -135,3 +135,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // чередуем каждые 12 сек
     setInterval(updateBadge, 20000);
 });
+
+/* === ЛОГИКА ГАЛЕРЕИ (КНОПКИ) === */
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById('gallery-track');
+    const btnPrev = document.getElementById('gallery-prev');
+    const btnNext = document.getElementById('gallery-next');
+
+    if (track && btnPrev && btnNext) {
+        // Прокрутка на 300px (ширина одной картинки + отступ)
+        btnPrev.addEventListener('click', () => {
+            track.scrollBy({ left: -320, behavior: 'smooth' });
+        });
+
+        btnNext.addEventListener('click', () => {
+            track.scrollBy({ left: 320, behavior: 'smooth' });
+        });
+    }
+});

@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YogaLife - Курс преподавателей</title>
+    <title>Арина Шалаева - Йога в Алматы</title>
     
-    <link rel="icon" type="image/png" href="assets/lima_bg.png">
-
+    <link rel="icon" type="image/png" href="assets/mascot-hero.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,31 +14,29 @@
     <header class="header" id="header">
         <nav class="nav container">
             <a href="#" class="nav__logo">
-                <i class="ri-leaf-fill"></i> YogaLife
+                <i class="ri-leaf-fill"></i> Arina Yoga
             </a>
 
             <div class="nav__menu" id="nav-menu">
                 <div class="nav__header-mobile">
-                    <span class="nav__logo-mobile">YogaLife</span>
-                    
-                    <div class="nav__close" id="nav-close" onclick="closeMenu()">
+                    <span class="nav__logo-mobile">Arina Yoga</span>
+                    <div class="nav__close" id="nav-close">
                         <i class="ri-close-line"></i>
                     </div>
                 </div>
                 
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#about" class="nav__link" onclick="closeMenu()">О курсе</a></li>
-                    <li class="nav__item"><a href="#benefits" class="nav__link" onclick="closeMenu()">Преимущества</a></li>
-                    <li class="nav__item"><a href="#program" class="nav__link" onclick="closeMenu()">Программа</a></li>
-                    <li class="nav__item"><a href="#teachers" class="nav__link" onclick="closeMenu()">Наставники</a></li>
-                    <li class="nav__item"><a href="#faq" class="nav__link" onclick="closeMenu()">FAQ</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">Обо мне</a></li>
+                    <li class="nav__item"><a href="#directions" class="nav__link">Направления</a></li>
+                    <li class="nav__item"><a href="#gallery" class="nav__link">Фото</a></li>
+                    <li class="nav__item"><a href="#schedule" class="nav__link">Расписание</a></li>
+                    <li class="nav__item"><a href="#reviews" class="nav__link">Отзывы</a></li>
                 </ul>
             </div>
             
             <div class="nav__actions">
-                <a href="#contact" class="button button--small nav__btn-desk">Записаться</a>
-                
-                <div class="nav__toggle" id="nav-toggle" onclick="toggleMenu()">
+                <a href="#contact" class="button button--small nav__btn-desk">Контакты</a>
+                <div class="nav__toggle" id="nav-toggle">
                     <i class="ri-menu-line"></i>
                 </div>
             </div>
@@ -48,261 +44,352 @@
     </header>
 
     <section class="hero section">
+        <img src="assets/mascot-hero.png" alt="Йога маскот" class="hero-mascot floating-animation">
+
         <div class="container hero__container grid">
             <div class="hero__data">
                 <div class="hero__badges">
-                    <span class="hero__badge"><div id="countdown"></div></span>
-                    
-                    <span class="hero__badge hero__badge--alt"></span>
+                    <span class="hero__badge hero__badge--alt">Алматы</span>
+                    <span class="hero__badge">Йога-терапия</span>
                 </div>
+                
                 <h1 class="hero__title">
-                    Превратите любовь к йоге<br>в профессию души
+                    Арина Шалаева
                 </h1>
-                <p class="hero__description">
-                    Сертифицированный курс подготовки преподавателей хатха-йоги (YTTC 400 часов). 
-                    Международный стандарт Yoga Alliance. Глубокое погружение в практику и философию.
+                <p class="section__subtitle" style="text-align: left; margin-bottom: 1rem;">
+                    Инструктор по хатха-йоге и йога-терапии
                 </p>
                 
+                <p class="hero__description">
+                    Мягкая и безопасная йога для женщин, которые хотят снять напряжение, восстановить тело и почувствовать опору.
+                </p>
+
+                <div class="mb-4">
+                    <strong>Без боли • Без давления • С вниманием к телу</strong>
+                </div>
+                
                 <ul class="hero__list">
-                    <li><i class="ri-check-line"></i> Международный сертификат RYT 200/500</li>
-                    <li><i class="ri-check-line"></i> Помощь в трудоустройстве</li>
-                    <li><i class="ri-check-line"></i> Онлайн и Оффлайн форматы</li>
+                    <li><i class="ri-check-line"></i> Оффлайн-занятия в Алматы и индивидуально онлайн</li>
+                    <li><i class="ri-check-line"></i> Группы до 15 человек и персональный подход</li>
+                    <li><i class="ri-check-line"></i> Подходит для любого уровня подготовки</li>
+                    <li><i class="ri-check-line"></i> Мягкий, внимательный и поддерживающий стиль</li>
                 </ul>
 
                 <div class="hero__buttons">
-                    <a href="#program" class="button button--pulse">Смотреть программу</a>
-                    <a href="#teachers" class="button button--ghost">Мастера</a>
+                    <a href="https://wa.me/77052707898?text=Здравствуйте!%0A%0AПишу с вашего сайта. Хочу записаться на тренировку!.%0A%0A" target="_blank" class="button button--pulse">
+                        <i class="ri-whatsapp-line" style="margin-right: 8px;"></i> Записаться (WhatsApp)
+                    </a>
+                    <a href="https://instagram.com/a.rina_yoga_almaty" target="_blank" class="button button--ghost">
+                        <i class="ri-instagram-line"></i> Instagram
+                    </a>
                 </div>
             </div>
 
             <div class="hero__image-wrapper breathing-animation">
-                <div class="img-placeholder img-placeholder--hero">
-                    <i class="ri-image-add-line"></i>
-                    <span>Главное фото<br>(Девушка в асане)</span>
+                <div class="img-placeholder img-placeholder--hero" style="padding: 0; border: none; overflow: hidden;">
+                    <img src="assets/trainer-main.jpg" alt="Арина Шалаева" class="hero-img-real">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section" id="benefits">
-        <div class="container">
-            <div class="text-center mb-4">
-                <h2 class="section__title">Почему выбирают YogaLife?</h2>
-                <p class="section__subtitle">Мы создали систему, которая работает</p>
-            </div>
-            
-            <div class="grid grid--3-cols">
-                <div class="benefit-card float-card reveal">
-                    <div class="benefit-icon"><i class="ri-global-line"></i></div>
-                    <h3>Международный Диплом</h3>
-                    <p>Наши сертификаты котируются во всем мире. Вы сможете преподавать в Европе, Азии и США.</p>
-                </div>
-                <div class="benefit-card float-card reveal">
-                    <div class="benefit-icon"><i class="ri-briefcase-4-line"></i></div>
-                    <h3>Карьера</h3>
-                    <p>Мы не бросаем выпускников. Лучшие студенты получают приглашение на стажировку.</p>
-                </div>
-                <div class="benefit-card float-card reveal ">
-                    <div class="benefit-icon"><i class="ri-group-line"></i></div>
-                    <h3>Живое комьюнити</h3>
-                    <p>Вы попадаете в среду единомышленников. Закрытые чаты и поддержка 24/7.</p>
-                </div>
-                <div class="benefit-card float-card reveal">
-                    <div class="benefit-icon"><i class="ri-group-line"></i></div>
-                    <h3>Живое комьюнити</h3>
-                    <p>Вы попадаете в среду единомышленников. Закрытые чаты и поддержка 24/7.</p>
-                </div>
-                <div class="benefit-card float-card reveal">
-                    <div class="benefit-icon"><i class="ri-computer-line"></i></div>
-                    <h3>Удобный формат</h3>
-                    <p>Современная онлайн-платформа для теории и живые практические интенсивы.</p>
-                </div>
-                <div class="benefit-card float-card reveal">
-                    <div class="benefit-icon"><i class="ri-book-read-line"></i></div>
-                    <h3>Методология</h3>
-                    <p>Мы учим видеть тело ученика, корректировать правками и вести травмобезопасную практику.</p>
-                </div>
-                <div class="benefit-card float-card reveal">
-                    <div class="benefit-icon"><i class="ri-heart-pulse-line"></i></div>
-                    <h3>Трансформация</h3>
-                    <p>Курс — это глубокая работа над собой, своими привычками и здоровьем.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section bg-soft" id="program">
-        <div class="container">
-            <div class="text-center mb-4">
-                <h2 class="section__title">Программа курса (400 часов)</h2>
-                <p class="section__subtitle">Фундаментальное образование</p>
-            </div>
-
-            <div class="program-grid">
-                <div class="program-item float-card">
-                    <span class="program-item__num">01</span>
-                    <h3>История и Философия</h3>
-                    <p class="program-desc">Изучение первоисточников: Йога-сутры Патанджали, Хатха-Йога Прадипика. Яма и Нияма.</p>
-                </div>
-                <div class="program-item float-card">
-                    <span class="program-item__num">02</span>
-                    <h3>Анатомия и Физиология</h3>
-                    <p class="program-desc">Биомеханика суставов. Травмобезопасность. Влияние йоги на гормональную систему.</p>
-                </div>
-                <div class="program-item float-card">
-                    <span class="program-item__num">03</span>
-                    <h3>Отстройка Асан</h3>
-                    <p class="program-desc">Детальный разбор 108 ключевых асан. Геометрия тела. Правки руками (Аджайстмент).</p>
-                </div>
-                <div class="program-item float-card">
-                    <span class="program-item__num">04</span>
-                    <h3>Пранаяма и Медитация</h3>
-                    <p class="program-desc">Физиология дыхания. Основные техники пранаям. Введение в медитацию и mindfulness.</p>
-                </div>
-                <div class="program-item float-card">
-                    <span class="program-item__num">05</span>
-                    <h3>Методика преподавания</h3>
-                    <p class="program-desc">Как строить последовательности. Голос преподавателя. Психология работы с группой.</p>
-                </div>
-                <div class="program-item float-card">
-                    <span class="program-item__num">06</span>
-                    <h3>Личный бренд</h3>
-                    <p class="program-desc">Юридические аспекты. Как набрать первую группу. Ведение соцсетей.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="teachers">
-        <div class="container">
-            <h2 class="section__title text-center">Наставники курса</h2>
-            <div class="teachers-grid mt-4">
-                
-                <div class="teacher-card float-card">
-                    <div class="teacher-card__img-box">
-                        <div class="img-placeholder"><i class="ri-user-smile-line"></i><span>Фото (3:4)</span></div>
-                    </div>
-                    <div class="teacher-card__info">
-                        <h3>Анна Иванова</h3>
-                        <span class="teacher-role">Основатель школы</span>
-                        <p class="teacher-desc">Сертифицированный преподаватель (E-RYT 500). Опыт практики 20 лет.</p>
-                    </div>
-                </div>
-
-                <div class="teacher-card float-card">
-                    <div class="teacher-card__img-box">
-                        <div class="img-placeholder"><i class="ri-user-smile-line"></i><span>Фото (3:4)</span></div>
-                    </div>
-                    <div class="teacher-card__info">
-                        <h3>Сергей Петров</h3>
-                        <span class="teacher-role">Анатомия и терапия</span>
-                        <p class="teacher-desc">Врач-остеопат, йогатерапевт. Автор методики "Здоровая спина".</p>
-                    </div>
-                </div>
-
-                <div class="teacher-card float-card">
-                    <div class="teacher-card__img-box">
-                        <div class="img-placeholder"><i class="ri-user-smile-line"></i><span>Фото (3:4)</span></div>
-                    </div>
-                    <div class="teacher-card__info">
-                        <h3>Елена Сидорова</h3>
-                        <span class="teacher-role">Философия</span>
-                        <p class="teacher-desc">Востоковед, переводчик древних текстов. Делает философию доступной.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="section bg-soft">
-        <div class="container grid grid--2-cols align-center">
+    <section class="section" id="about">
+        <div class="container grid grid--2-cols align-center" style="grid-template-columns: 1.2fr 0.8fr; align-items: start; gap: 3rem;">
             <div>
-                <h2 class="section__title">Документы об окончании</h2>
-                <p class="mb-2">
-                    После успешной сдачи экзаменов вы получаете полный пакет документов, который дает право легально преподавать йогу по всему миру.
-                </p>
-                <ul class="hero__list" style="margin-top: 1rem;">
-                    <li><i class="ri-checkbox-circle-fill"></i> Сертификат YogaLife (Int)</li>
-                    <li><i class="ri-checkbox-circle-fill"></i> Регистрация в Yoga Alliance (RYT 200)</li>
-                    <li><i class="ri-checkbox-circle-fill"></i> Удостоверение о повышении квалификации</li>
-                </ul>
-            </div>
-            <div class="img-placeholder img-placeholder--rect float-card">
-                <i class="ri-file-paper-2-line"></i>
-                <span>Фото Сертификатов<br>(Горизонтальное)</span>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="faq">
-        <div class="container max-w-800">
-            
-            <div class="section-header-with-mascot text-center mb-4">
-                <img src="assets/lima_bg.png" alt="Mascot Helper" class="mascot-deco mascot-deco--faq breathing-animation">
-                <div>
-                    <h2 class="section__title">Вопросы и ответы</h2>
-                    <p class="section__subtitle">Я помогу разобраться!</p>
-                </div>
-            </div>
-            
-            <div class="faq__container">
-                <details class="faq-card">
-                    <summary>Подойдет ли мне курс, если я новичок?<span class="faq-icon"><i class="ri-add-line"></i></span></summary>
-                    <div class="faq-content"><p>Да, курс построен по принципу "от простого к сложному". Мы начинаем с самых основ. Главное — ваша мотивация.</p></div>
-                </details>
-
-                <details class="faq-card">
-                    <summary>Как проходит экзамен?<span class="faq-icon"><i class="ri-add-line"></i></span></summary>
-                    <div class="faq-content"><p>Экзамен состоит из теста по теории, проведения практического занятия и собеседования.</p></div>
-                </details>
-
-                <details class="faq-card">
-                    <summary>Есть ли рассрочка оплаты?<span class="faq-icon"><i class="ri-add-line"></i></span></summary>
-                    <div class="faq-content"><p>Конечно. Мы предоставляем беспроцентную внутреннюю рассрочку на 4 платежа.</p></div>
-                </details>
+                <h2 class="section__title">Давай знакомиться ближе!</h2>
                 
-                 <details class="faq-card">
-                    <summary>Что если я пропущу занятие?<span class="faq-icon"><i class="ri-add-line"></i></span></summary>
-                    <div class="faq-content"><p>Все уроки записываются и доступны в личном кабинете навсегда.</p></div>
-                </details>
-            </div>
-        </div>
-    </section>
+                <div class="about-img-wrapper float-card mb-4" style="max-width: 400px; margin: 0 auto 2rem auto;">
+                    <div style="height: 500px; overflow: hidden; border-radius: 16px;">
+                         <img src="assets/trainer-about.jpg" alt="Арина на практике" 
+                              style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+                    </div>
+                </div>
 
-    <footer class="footer">
-        <div class="container grid grid--3-cols">
-            <div class="footer__col">
-                <a href="#" class="nav__logo text-white mb-2"><i class="ri-leaf-fill"></i> YogaLife</a>
-                <p class="footer__text">Пространство осознанности.<br>Обучение инструкторов йоги с 2015 года.</p>
-            </div>
-            
-            <div class="footer__col footer__col--contact">
-                <img src="assets/lima_bg.png" alt="Mascot" class="mascot-deco mascot-deco--footer">
-                <div>
-                    <h4 class="footer__title">Контакты</h4>
-                    <p>+7 (999) 000-00-00</p>
-                    <p>info@yogalife.com</p>
-                    <div class="footer__socials mt-2">
-                        <a href="#"><i class="ri-telegram-fill"></i></a>
-                        <a href="#"><i class="ri-whatsapp-line"></i></a>
-                        <a href="#"><i class="ri-youtube-fill"></i></a>
+                <div class="about__content" style="color: var(--text-light); font-size: 1rem; line-height: 1.7;">
+                    <p class="mb-2">
+                        Меня зовут <strong>Арина Шалаева</strong>, мне 22 года. Я инструктор по хатха-йоге и йога-терапии, живу и работаю в Алматы.
+                    </p>
+                    <p class="mb-2">
+                        Мой путь — это <strong>более 4 лет</strong> личной практики и преподавания.
+                    </p>
+                    
+                    <h3 style="font-size: 1.1rem; color: var(--secondary); margin-top: 1.5rem; margin-bottom: 0.5rem;">В своих практиках я соединяю:</h3>
+                    <ul class="hero__list" style="margin-bottom: 1.5rem;">
+                        <li><i class="ri-leaf-line"></i> дыхательные практики (пранаяма)</li>
+                        <li><i class="ri-leaf-line"></i> мягкую настройку и медитацию</li>
+                        <li><i class="ri-leaf-line"></i> структурированные и безопасные комплексы асан</li>
+                        <li><i class="ri-leaf-line"></i> глубокое расслабление и интеграцию практики</li>
+                    </ul>
+                    
+                    <div class="benefit-card mt-4" style="border-left: 4px solid var(--primary);">
+                        <p><strong>Мой стиль</strong> — осознанный, заботливый и позитивный. Я ценю здоровый образ жизни и помогаю ученикам выстраивать бережные и устойчивые отношения с телом.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="footer__col">
-                <h4 class="footer__title">Информация</h4>
-                <a href="#" class="footer__link">Договор оферты</a><br>
-                <a href="#" class="footer__link">Политика конфиденциальности</a>
+            <div class="program-item float-card reveal" style="position: sticky; top: 100px;">
+                <span class="program-item__num" style="right: 20px; top: 10px;">Edu</span>
+                <h3 style="margin-bottom: 1.5rem; color: var(--secondary);">Моё образование и подход</h3>
+                
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
+                    <li>
+                        <strong>Fitness Yoga</strong> (Алматы, 2021)<br>
+                        <span style="font-size: 0.9rem; color: var(--text-light);">Ассоциация фитнес-йоги</span>
+                    </li>
+                    <li>
+                        <strong>Хатха-йога</strong> (2022)<br>
+                        <span style="font-size: 0.9rem; color: var(--text-light);">Школа йоги «Гаятри»</span>
+                    </li>
+                    <li>
+                        <strong>Духовное наставничество</strong> (Москва, 2023)
+                    </li>
+                    <li>
+                        <strong>Школа Expert</strong> (Текущее обучение)<br>
+                        <span style="font-size: 0.9rem; color: var(--text-light);">Международная квалификация</span>
+                    </li>
+                </ul>
+                <hr style="margin: 1.5rem 0; border: 0; border-top: 1px solid #eee;">
+                <p style="font-size: 0.95rem; color: var(--secondary); font-weight: 600;">
+                    Эти знания позволяют мне адаптировать практику под твои индивидуальные особенности.
+                </p>
             </div>
         </div>
-        <div class="footer__copy text-center mt-4">
-            &copy; 2026 YogaLife. Все права защищены.
+    </section>
+
+    <section class="section bg-soft" id="directions">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="section__title">Что мы практикуем?</h2>
+                <p class="section__subtitle">Два подхода к здоровью тела и духа</p>
+            </div>
+
+            <div class="grid grid--2-cols" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: stretch;">
+                
+                <div class="benefit-card float-card reveal direction-card">
+                    <img src="assets/mascot-hatha.png" alt="Хатха йога маскот" class="direction-mascot">
+                    
+                    <h3>Хатха-йога</h3>
+                    <p class="mb-2"><strong>Польза:</strong> гибкость, сила, подвижность, спокойствие ума, снижение стресса и глубокая связь с телом.</p>
+                    
+                    <h4 style="font-size: 1rem; color: var(--secondary); margin-top: auto; padding-top: 1rem;">Структура занятия (60-90 мин):</h4>
+                    <ul style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.5rem; padding-left: 1rem;">
+                        <li>1. Настройка и медитация</li>
+                        <li>2. Пранаяма (дыхание)</li>
+                        <li>3. Разминка</li>
+                        <li>4. Основной комплекс асан</li>
+                        <li>5. Шавасана и релаксация</li>
+                    </ul>
+                </div>
+
+                <div class="benefit-card float-card reveal direction-card">
+                    <img src="assets/mascot-therapy.png" alt="Йога терапия маскот" class="direction-mascot">
+
+                    <h3>Йога-терапия</h3>
+                    <p class="mb-2">Мягкое восстановление. Адаптивная практика, ориентированная на индивидуальные особенности.</p>
+                    
+                    <h4 style="font-size: 1rem; color: var(--secondary); margin-top: auto; padding-top: 1rem;">Подходит для:</h4>
+                    <ul style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.5rem; padding-left: 1rem;">
+                        <li>• Новичков и людей с ограниченной подвижностью</li>
+                        <li>• Восстановления после травм</li>
+                        <li>• Снятия хронического напряжения</li>
+                    </ul>
+                    <p class="mt-4" style="font-size: 0.9rem; font-weight: 600; color: var(--primary);">Цель: комфорт, здоровье и расслабление без боли.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="gallery">
+        <div class="container" style="position: relative;">
+            <h2 class="section__title text-center mb-2">Фото с занятий</h2>
+            <p class="section__subtitle text-center mb-4">Атмосфера наших практик</p>
+
+            <button class="gallery-btn gallery-btn--left" id="gallery-prev">
+                <i class="ri-arrow-left-s-line"></i>
+            </button>
+
+            <div class="gallery-carousel snap-inline" id="gallery-track">
+                <div class="gallery-item"><img src="assets/gallery-1.jpg" alt="Фото 1"></div>
+                <div class="gallery-item"><img src="assets/gallery-2.jpg" alt="Фото 2"></div>
+                <div class="gallery-item"><img src="assets/gallery-3.jpg" alt="Фото 3"></div>
+                <div class="gallery-item"><img src="assets/gallery-4.jpg" alt="Фото 4"></div>
+                <div class="gallery-item"><img src="assets/gallery-5.jpg" alt="Фото 5"></div>
+                <div class="gallery-item"><img src="assets/gallery-6.jpg" alt="Фото 6"></div>
+                <div class="gallery-item"><img src="assets/gallery-7.jpg" alt="Фото 7"></div>
+                <div class="gallery-item"><img src="assets/gallery-8.jpg" alt="Фото 8"></div>
+                <div class="gallery-item"><img src="assets/gallery-9.jpg" alt="Фото 9"></div>
+            </div>
+
+            <button class="gallery-btn gallery-btn--right" id="gallery-next">
+                <i class="ri-arrow-right-s-line"></i>
+            </button>
+            
+        </div>
+    </section>
+
+    <section class="section bg-soft" id="schedule">
+        <div class="container">
+            <h2 class="section__title text-center">Где я преподаю</h2>
+            <p class="section__subtitle text-center mb-4">Студии в г. Алматы</p>
+            
+            <div class="program-grid">
+                <div class="program-item float-card" style="border-bottom-color: var(--primary);">
+                    <span class="program-item__num">01</span>
+                    <h3>Студия «Материя»</h3>
+                    <p class="program-desc mb-2">📍 г. Алматы</p>
+                    <ul style="list-style: none; font-weight: 500; color: var(--secondary);">
+                        <li class="mb-2">Пн / Ср / Пт</li>
+                        <li>19:30 – Хатха-йога</li>
+                        <li>20:30 – Хатха-йога</li>
+                    </ul>
+                </div>
+
+                <div class="program-item float-card" style="border-bottom-color: var(--primary);">
+                    <span class="program-item__num">02</span>
+                    <h3>Ikigai Art & Yoga Space</h3>
+                    <p class="program-desc mb-2">📍 г. Алматы</p>
+                    <ul style="list-style: none; font-weight: 500; color: var(--secondary);">
+                        <li class="mb-2">Вт / Чт</li>
+                        <li>11:00 – Хатха-йога</li>
+                        <li>13:00 – Йога-терапия</li>
+                        <li>15:00 – Хатха-йога</li>
+                        <li class="mt-2" style="border-top: 1px dashed #ccc; padding-top: 5px;">Суббота</li>
+                        <li>08:00 – Йога-терапия</li>
+                        <li>10:00, 12:00 – Хатха-йога</li>
+                    </ul>
+                </div>
+
+                <div class="program-item float-card" style="border-bottom-color: var(--primary);">
+                    <span class="program-item__num">03</span>
+                    <h3>Центр «VozРождение»</h3>
+                    <p class="program-desc mb-2">📍 г. Алматы, оздоровительный центр</p>
+                    <div style="margin-top: 1rem; padding: 1rem; background: var(--white); border-radius: 8px; text-align: center;">
+                        <strong>Занятия по записи</strong>
+                    </div>
+                </div>
+
+            </div>
+            <p class="text-center mt-4" style="color: var(--text-light); font-size: 0.9rem;">
+                💰 Стоимость абонементов уточняется у администрации студий
+            </p>
+        </div>
+    </section>
+
+    <section class="section" id="online">
+        <div class="container hero__container grid" style="gap: 2rem;">
+            <div>
+                <h2 class="section__title">Онлайн-занятия</h2>
+                <h3 class="mb-2" style="font-weight: 500; color: var(--primary);">Из любой точки мира</h3>
+                <p class="mb-4">
+                    Персональная работа под твои цели. Гибкое расписание и полное внимание к технике и прогрессу.
+                </p>
+                
+                <div class="benefit-card mb-4 float-card" style="display: inline-block; padding: 1.5rem; min-width: 250px; border-color: var(--secondary);">
+                    <span style="display: block; font-size: 0.9rem; color: var(--text-light);">Стоимость:</span>
+                    <strong style="font-size: 1.5rem; color: var(--secondary);">4 000 тг / час</strong>
+                </div>
+                
+                <div>
+                    <a href="https://wa.me/77052707898?text=Здравствуйте!%0A%0AПишу с вашего сайта. Хочу записаться на тренировку!.%0A%0A" class="button button--pulse">
+                        👉 Записаться на онлайн
+                    </a>
+                </div>
+            </div>
+
+            <div class="img-wrapper float-card" style="border-radius: 20px; overflow: hidden; height: 350px;">
+                <img src="assets/online.jpg" alt="Онлайн занятия" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-soft" id="reviews">
+        <div class="container">
+            <h2 class="section__title text-center mb-4">Отзывы учеников</h2>
+            <div class="grid grid--2-cols">
+                
+                <div class="benefit-card float-card">
+                    <div style="color: var(--primary); font-size: 2rem; line-height: 1;">“</div>
+                    <p style="font-style: italic; margin-bottom: 1rem;">
+                        Арина доброе утро, спина вчера сказала спасибо! Плечи расправились, я прям немного в шоке была что за 1 раз так тело отозвалось. Эмоционально прекрасно перегрузилась.
+                    </p>
+                    <h4 style="font-size: 1rem;">— Вероника, г. Алматы</h4>
+                </div>
+
+                <div class="benefit-card float-card">
+                    <div style="color: var(--primary); font-size: 2rem; line-height: 1;">“</div>
+                    <p style="font-style: italic; margin-bottom: 1rem;">
+                        Первое занятие очень понравилось! Приятная атмосфера, музыка, ваш голос. После практики чувствовала себя очень хорошо, домой ехала довольная.
+                    </p>
+                    <h4 style="font-size: 1rem;">— Кристина, г. Санкт-Петербург</h4>
+                </div>
+
+                <div class="benefit-card float-card">
+                    <div style="color: var(--primary); font-size: 2rem; line-height: 1;">“</div>
+                    <p style="font-style: italic; margin-bottom: 1rem;">
+                        Чувствую себя очень легко, нежно... Дискомфорта абсолютно не было, спасибо за то, что направляла меня по ходу занятия. Надеюсь я теперь долго буду бежать к тебе на йогу как на праздник!
+                    </p>
+                    <h4 style="font-size: 1rem;">— Анастасия, г. Санкт-Петербург</h4>
+                </div>
+
+                <div class="benefit-card float-card">
+                    <div style="color: var(--primary); font-size: 2rem; line-height: 1;">“</div>
+                    <p style="font-style: italic; margin-bottom: 1rem;">
+                        Движение позвоночника и лопаток лучше чувствую и без боли. Спасибо большое за практику!
+                    </p>
+                    <h4 style="font-size: 1rem;">— Арина, г. Алматы</h4>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer section" id="contact" style="padding-top: 4rem;">
+        <div class="container text-center max-w-800">
+            <h2 class="section__title text-white">Готова начать заботу о себе?</h2>
+            <p class="mb-4 text-white" style="opacity: 0.9;">
+                Если ты хочешь мягко войти в практику, восстановить тело и почувствовать поддержку — напиши мне.
+            </p>
+            
+            <div class="hero__buttons" style="justify-content: center; margin-bottom: 4rem;">
+                <a href="https://wa.me/77052707898?text=Здравствуйте!%0A%0AПишу с вашего сайта. Хочу записаться на тренировку!.%0A%0A" class="button">
+                    Написать в WhatsApp
+                </a>
+                <a href="https://instagram.com/a.rina_yoga_almaty" class="button button--ghost" style="color: white; border-color: white;">
+                    Instagram Direct
+                </a>
+            </div>
+
+            <hr style="opacity: 0.2; margin-bottom: 3rem;">
+
+            <div class="grid grid--2-cols" style="text-align: left; align-items: start;">
+                
+                <div>
+                    <h3 class="text-white" style="font-size: 1.2rem; margin-bottom: 1rem;">Арина Шалаева</h3>
+                    <p class="text-white" style="opacity: 0.7; line-height: 1.6;">
+                        Инструктор по йоге.<br>
+                        Алматы, Казахстан.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-white" style="font-size: 1.2rem; margin-bottom: 1rem;">Контакты</h3>
+                    <div class="footer__socials mb-2">
+                        <a href="https://instagram.com/a.rina_yoga_almaty" target="_blank"><i class="ri-instagram-line"></i></a>
+                        <a href="https://wa.me/77052707898?text=Здравствуйте!%0A%0AПишу с вашего сайта. Хочу записаться на тренировку!.%0A%0A" target="_blank"><i class="ri-whatsapp-line"></i></a>
+                    </div>
+                    <p class="text-white" style="font-size: 0.9rem; opacity: 0.8;">@a.rina_yoga_almaty</p>
+                </div>
+                
+            </div>
+            
+            <div class="footer__copy text-center mt-4 text-white" style="font-size: 0.8rem; opacity: 0.6; margin-top: 3rem;">
+                &copy; 2026 Arina Yoga.
+            </div>
         </div>
     </footer>
 
-    <a href="https://wa.me/79990000000" target="_blank" class="floating-mascot-btn">
+    <a href="https://wa.me/77052707898?text=Здравствуйте!%0A%0AПишу с вашего сайта. Хочу записаться на тренировку!.%0A%0A" target="_blank" class="floating-mascot-btn">
         <div class="mascot-btn-content">
             <img src="assets/lima_bg.png" alt="Чат WhatsApp" class="mascot-btn-img">
         </div>
