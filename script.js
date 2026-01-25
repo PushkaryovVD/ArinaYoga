@@ -153,3 +153,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+/* === АНИМАЦИЯ КЛИКА ПО МАСКОТУ ("ПОДАРОК") === */
+document.addEventListener('DOMContentLoaded', () => {
+    const mascotBtn = document.querySelector('.floating-mascot-btn');
+
+    if (mascotBtn) {
+        mascotBtn.addEventListener('click', function(e) {
+            // 1. Отменяем мгновенный переход по ссылке
+            e.preventDefault();
+
+            const link = this.getAttribute('href');
+
+            // 2. Добавляем класс, запускающий CSS-анимацию
+            this.classList.add('mascot-clicking');
+
+            // 3. Ждем окончания анимации (600 мс) и переходим
+            setTimeout(() => {
+                // Открываем WhatsApp в новой вкладке
+                window.open(link, '_blank');
+                
+                // Убираем класс, чтобы если вернутся на вкладку, маскот был в норме
+                this.classList.remove('mascot-clicking');
+            }, 600);
+        });
+    }
+});

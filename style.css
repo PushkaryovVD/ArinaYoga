@@ -159,20 +159,106 @@ img { max-width: 100%; display: block; }
 .footer__socials a { display: inline-flex; width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; align-items: center; justify-content: center; margin-right: 10px; color: white; font-size: 1.2rem; }
 .footer__socials a:hover { background: var(--primary); }
 
-/* === 10. ПЛАВАЮЩИЙ МАСКОТ === */
+/* === 10. ПЛАВАЮЩИЙ МАСКОТ (Обновленный) === */
 .floating-mascot-btn {
-    position: fixed; bottom: 30px; right: 30px; z-index: 999;
-    width: 80px; height: 80px; 
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+    /* УВЕЛИЧЕННЫЙ РАЗМЕР для ПК */
+    width: 130px;
+    height: 130px;
+    /* Базовая анимация плавания */
     animation: mascot-float 3s ease-in-out infinite;
-    transition: 0.3s;
+    transition: transform 0.3s;
+    /* Убираем стандартное подчеркивание ссылки */
+    text-decoration: none; 
 }
-.floating-mascot-btn:hover { transform: scale(1.1); }
-.mascot-btn-content { position: relative; width: 100%; height: 100%; }
+
+/* Увеличение при наведении (только если не идет анимация клика) */
+.floating-mascot-btn:hover:not(.mascot-clicking) {
+    transform: scale(1.05) translateY(-5px);
+}
+
+.mascot-btn-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Эффект "Взрывной волны" при клике --- */
+/* Создаем невидимый круг позади маскота */
+.mascot-btn-content::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(37, 211, 102, 0) 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0); /* Сначала он сжат в ноль */
+    opacity: 1;
+    z-index: -1; /* За маскотом */
+    pointer-events: none;
+}
+
 .mascot-btn-img {
-    width: 100%; height: 100%; object-fit: contain; 
-    filter: drop-shadow(0 5px 15px rgba(37, 211, 102, 0.4));
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Зеленая тень */
+    filter: drop-shadow(0 5px 15px rgba(37, 211, 102, 0.5));
+    transition: filter 0.3s;
 }
-@keyframes mascot-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+/* --- Анимация плавания (вверх-вниз) --- */
+@keyframes mascot-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+/* --- Анимация тряски при клике ("Открытие подарка") --- */
+@keyframes gift-shake {
+    0% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(-8deg) scale(1.05); }
+    50% { transform: rotate(8deg) scale(1.05); }
+    75% { transform: rotate(-5deg) scale(1.05); }
+    100% { transform: rotate(0deg) scale(1); }
+}
+
+/* === Класс, который добавляется JS при клике === */
+.floating-mascot-btn.mascot-clicking {
+    /* Применяем анимацию тряски, перекрывая плавание */
+    animation: gift-shake 0.5s ease-in-out forwards;
+}
+
+/* При клике "взрываем" волну */
+.floating-mascot-btn.mascot-clicking .mascot-btn-content::after {
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+    transform: translate(-50%, -50%) scale(2.5); /* Увеличивается в 2.5 раза */
+    opacity: 0; /* И исчезает */
+}
+
+/* При клике делаем тень ярче */
+.floating-mascot-btn.mascot-clicking .mascot-btn-img {
+     filter: drop-shadow(0 0 25px rgba(37, 211, 102, 0.8), 0 0 50px rgba(255, 255, 255, 0.5));
+}
+
+
+/* === АДАПТИВ ДЛЯ МОБИЛЬНЫХ === */
+@media screen and (max-width: 768px) {
+    .floating-mascot-btn {
+        /* На телефоне чуть меньше, чтобы не мешал */
+        width: 100px;
+        height: 100px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
 
 /* === 11. АДАПТИВНОСТЬ (MOBILE FIX) === */
 @media screen and (max-width: 968px) {
@@ -332,7 +418,7 @@ img { max-width: 100%; display: block; }
     left: 5%;
     width: 120px; /* Размер маскота */
     height: auto;
-    z-index: 0; /* Чтобы был под текстом, если наедет */
+    z-index: 99; /* Чтобы был под текстом, если наедет */
     opacity: 0.9;
     pointer-events: none; /* Чтобы не мешал кликам */
 }
