@@ -1,0 +1,324 @@
+/* === 1. ШРИФТЫ И ПЕРЕМЕННЫЕ === */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
+
+:root {
+    --primary: #d291bc;
+    --primary-dark: #b87fa3;
+    --secondary: #304b75;
+    --text-main: #304b75;
+    --text-light: #556075;
+    
+    --bg-body: linear-gradient(to bottom, #ffffff, #fdfbfd);
+    --bg-soft: #f4eff6;
+    --white: #ffffff;
+    
+    --box-shadow: 0 10px 30px -5px rgba(48, 75, 117, 0.08);
+    --box-shadow-hover: 0 15px 40px -5px rgba(210, 145, 188, 0.2);
+
+    --header-height: 4.5rem;
+    --border-radius: 16px;
+}
+
+/* === 2. БАЗОВЫЕ НАСТРОЙКИ === */
+* { box-sizing: border-box; padding: 0; margin: 0; }
+html { scroll-behavior: smooth; }
+body { 
+    font-family: "Work Sans", sans-serif; 
+    background: var(--bg-body); 
+    color: var(--text-main); 
+    line-height: 1.6; 
+    overflow-x: hidden; 
+}
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+
+/* === 3. УТИЛИТЫ === */
+.container { max-width: 1140px; margin: 0 auto; padding: 0 1.5rem; }
+.grid { display: grid; gap: 2.5rem; }
+.section { padding: 6rem 0; }
+.text-center { text-align: center; }
+.mt-4 { margin-top: 3rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 2rem; }
+.bg-soft { background-color: var(--bg-soft); }
+.text-white { color: white !important; }
+.max-w-800 { max-width: 800px; margin-left: auto; margin-right: auto; }
+
+/* Карточки и Анимации */
+.float-card { 
+    background: var(--white); 
+    border-radius: var(--border-radius); 
+    box-shadow: var(--box-shadow); 
+    transition: all 0.4s ease; 
+}
+.float-card:hover { transform: translateY(-7px); box-shadow: var(--box-shadow-hover); }
+
+@keyframes breathing { 0% { transform: scale(1); } 50% { transform: scale(1.03); } 100% { transform: scale(1); } }
+.breathing-animation { animation: breathing 6s ease-in-out infinite; }
+
+/* Заглушки */
+.img-placeholder {
+    background-color: #eee4f0; border: 2px dashed var(--primary-dark);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    color: var(--text-light); text-align: center; font-size: 0.85rem; padding: 1rem; transition: 0.3s;
+}
+.img-placeholder i { font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--primary); }
+.img-placeholder--hero { width: 100%; height: 500px; border-radius: 30px; }
+.img-placeholder--rect { width: 100%; height: 350px; border-radius: 16px; }
+
+/* === 4. HEADER & NAVIGATION === */
+.header {
+    position: fixed; top: 0; left: 0; width: 100%;
+    background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.03);
+    z-index: 1000; height: var(--header-height); display: flex; align-items: center;
+}
+.nav { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+.nav__logo { font-size: 1.4rem; font-weight: 700; color: var(--secondary); display: flex; align-items: center; gap: 0.5rem; }
+.nav__logo i { color: var(--primary); font-size: 1.6rem; }
+
+.nav__list { display: flex; gap: 2rem; }
+.nav__link { font-weight: 500; color: var(--secondary); transition: 0.3s; font-size: 1rem; }
+.nav__link:hover { color: var(--primary); }
+
+.nav__actions { display: flex; align-items: center; gap: 1rem; }
+.nav__toggle { display: none; font-size: 1.8rem; cursor: pointer; color: var(--secondary); }
+.nav__close, .nav__header-mobile { display: none; }
+
+/* === 5. HERO SECTION === */
+.hero__container { grid-template-columns: 1fr 1fr; align-items: center; gap: 4rem; }
+.hero__badges { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.hero__badge { background: #FFD700; color: var(--secondary); padding: 0.5rem 1rem; border-radius: 30px; font-weight: 700; font-size: 0.85rem; }
+.hero__badge--alt { background: var(--primary); color: white; }
+.hero__title { font-size: 3.5rem; line-height: 1.1; margin-bottom: 1.5rem; color: var(--secondary); font-weight: 800; letter-spacing: -1px; }
+.hero__description { font-size: 1.1rem; color: var(--text-light); margin-bottom: 2rem; max-width: 500px; }
+.hero__list { margin-bottom: 2rem; }
+.hero__list li { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-weight: 500; color: var(--secondary); }
+.hero__list i { color: var(--primary); font-size: 1.2rem; }
+
+/* === 6. BUTTONS === */
+.button {
+    display: inline-flex; justify-content: center; align-items: center;
+    padding: 1rem 2.2rem; background-color: var(--primary); color: var(--white);
+    border-radius: 50px; font-weight: 600; font-size: 1rem; transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(210, 145, 188, 0.4);
+}
+.button:hover { background-color: var(--primary-dark); transform: translateY(-3px); }
+.button--ghost { background: transparent; color: var(--secondary); border: 2px solid var(--secondary); box-shadow: none; margin-left: 10px; }
+.button--ghost:hover { background: var(--secondary); color: white; }
+.button--pulse { animation: pulse-primary 2s infinite; }
+@keyframes pulse-primary {
+    0% { box-shadow: 0 0 0 0 rgba(210, 145, 188, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(210, 145, 188, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(210, 145, 188, 0); }
+}
+
+/* === 7. SECTIONS (BENEFITS, PROGRAM, TEACHERS) === */
+.benefit-card { background: white; padding: 2rem; border-radius: 16px; border: 1px solid #f0f0f0; text-align: left; transition: 0.3s; }
+.benefit-card:hover { border-color: var(--primary); box-shadow: var(--box-shadow); }
+.benefit-icon { width: 50px; height: 50px; background: var(--bg-soft); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; color: var(--primary); font-size: 1.5rem; }
+.benefit-card h3 { font-size: 1.2rem; color: var(--secondary); margin-bottom: 0.5rem; }
+.benefit-card p { font-size: 0.95rem; color: var(--text-light); }
+
+.program-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.program-item { padding: 2.5rem 2rem; position: relative; border-bottom: 4px solid transparent; }
+.program-item:hover { border-bottom-color: var(--primary); }
+.program-item__num { position: absolute; top: 15px; right: 20px; font-size: 4rem; font-weight: 800; color: var(--primary); opacity: 0.1; line-height: 1; }
+.program-item h3 { font-size: 1.3rem; margin-bottom: 1rem; color: var(--secondary); }
+.program-desc { color: var(--text-light); font-size: 0.95rem; }
+
+.teachers-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; }
+.teacher-card { overflow: hidden; }
+.teacher-card__img-box { width: 100%; aspect-ratio: 3 / 4; overflow: hidden; }
+.teacher-card__img-box .img-placeholder { width: 100%; height: 100%; border-radius: 16px 16px 0 0; background-color: #e0d8e4; border: none; }
+.teacher-card__info { padding: 1.5rem; text-align: center; }
+.teacher-card h3 { font-size: 1.2rem; color: var(--secondary); margin-bottom: 0.3rem; }
+.teacher-role { display: block; color: var(--primary); font-size: 0.8rem; font-weight: 700; margin-bottom: 0.8rem; text-transform: uppercase; }
+
+/* === 8. FAQ С МАСКОТОМ === */
+.section-header-with-mascot { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+.mascot-deco { width: 80px; height: auto; display: block; }
+.mascot-deco--faq { transform: rotate(-5deg); }
+
+.faq-card { background: var(--white); border-radius: 16px; margin-bottom: 1rem; border: 1px solid rgba(0,0,0,0.05); overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
+.faq-card[open] { border-color: var(--primary); }
+.faq-card summary { padding: 1.5rem; cursor: pointer; font-weight: 600; color: var(--secondary); display: flex; justify-content: space-between; align-items: center; list-style: none; }
+.faq-card summary::-webkit-details-marker { display: none; }
+.faq-icon { color: var(--primary); font-size: 1.5rem; transition: 0.3s; }
+.faq-card[open] .faq-icon { transform: rotate(45deg); }
+.faq-content { padding: 0 1.5rem 1.5rem 1.5rem; color: var(--text-light); font-size: 0.95rem; line-height: 1.6; border-top: 1px solid #f0f0f0; }
+
+/* === 9. FOOTER === */
+.footer { background-color: var(--secondary); color: white; padding-top: 5rem; padding-bottom: 2rem; }
+.footer__col--contact { display: flex; align-items: flex-start; gap: 1.5rem; }
+.mascot-deco--footer { width: 70px; opacity: 0.9; margin-top: 5px; }
+.footer__title { font-size: 1.1rem; margin-bottom: 1rem; color: white; }
+.footer__link { opacity: 0.7; transition: 0.3s; font-size: 0.9rem; }
+.footer__link:hover { opacity: 1; color: var(--primary); }
+.footer__socials a { display: inline-flex; width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; align-items: center; justify-content: center; margin-right: 10px; color: white; font-size: 1.2rem; }
+.footer__socials a:hover { background: var(--primary); }
+
+/* === 10. ПЛАВАЮЩИЙ МАСКОТ === */
+.floating-mascot-btn {
+    position: fixed; bottom: 30px; right: 30px; z-index: 999;
+    width: 80px; height: 80px; 
+    animation: mascot-float 3s ease-in-out infinite;
+    transition: 0.3s;
+}
+.floating-mascot-btn:hover { transform: scale(1.1); }
+.mascot-btn-content { position: relative; width: 100%; height: 100%; }
+.mascot-btn-img {
+    width: 100%; height: 100%; object-fit: contain; 
+    filter: drop-shadow(0 5px 15px rgba(37, 211, 102, 0.4));
+}
+@keyframes mascot-float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+/* === 11. АДАПТИВНОСТЬ (MOBILE FIX) === */
+@media screen and (max-width: 968px) {
+    .hero__title { font-size: 3rem; }
+    .hero__container { grid-template-columns: 1fr; text-align: center; }
+    .hero__buttons { justify-content: center; }
+    .hero__badges { justify-content: center; }
+    .hero__list { display: inline-block; text-align: left; margin: 0 auto 2rem auto; }
+    .hero__image-wrapper { order: -1; margin-bottom: 2rem; }
+}
+
+/* === АДАПТИВНОСТЬ (MOBILE FIX) === */
+@media screen and (max-width: 768px) {
+    /* 1. КНОПКА БУРГЕРА */
+    .nav__toggle {
+        display: block;
+        font-size: 1.8rem;
+        cursor: pointer;
+        z-index: 100; /* Чтобы точно нажималась */
+        color: var(--secondary);
+    }
+    
+    /* Скрываем кнопку "Записаться" на телефоне, чтобы не мешала */
+    .nav__btn-desk { 
+        display: none; 
+    }
+
+    /* 2. МЕНЮ (ШТОРКА) */
+    .nav__menu {
+        position: fixed;
+        top: 0;
+        /* ВАЖНО: Скрыто справа по умолчанию */
+        right: -100%; 
+        width: 80%; /* Занимает 80% экрана */
+        height: 100vh; /* На всю высоту */
+        background-color: #ffffff;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+        padding: 4rem 2rem; /* Отступы внутри */
+        transition: right 0.4s ease; /* Плавность */
+        z-index: 2000; /* Поверх всего сайта */
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 3. КЛАСС АКТИВНОГО МЕНЮ (ОТКРЫТО) */
+    /* Когда JS добавляет этот класс, меню выезжает */
+    .nav__menu.show-menu {
+        right: 0 !important; /* !important гарантирует, что оно откроется */
+    }
+
+    /* 4. ШАПКА ВНУТРИ МЕНЮ (Лого + Крестик) */
+    .nav__header-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3rem;
+        width: 100%;
+    }
+
+    .nav__logo-mobile {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--secondary);
+        text-transform: uppercase;
+    }
+
+    /* Крестик закрытия */
+    .nav__close {
+        display: block;
+        font-size: 2rem;
+        color: var(--primary);
+        cursor: pointer;
+    }
+
+    /* Ссылки внутри меню */
+    .nav__list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+    
+    .nav__link {
+        font-size: 1.2rem;
+        color: var(--secondary);
+        font-weight: 500;
+        display: block;
+        width: 100%;
+    }
+
+    /* Остальные мобильные стили */
+    .hero__title { font-size: 2.2rem; }
+    .grid--3-cols, .grid--2-cols { grid-template-columns: 1fr; }
+    .footer .grid { grid-template-columns: 1fr; text-align: center; gap: 2.5rem; }
+    .footer__col--contact { flex-direction: column; align-items: center; }
+    .footer__socials { justify-content: center; }
+    .floating-mascot-btn { width: 65px; height: 65px; bottom: 20px; right: 20px; }
+}
+
+.header {
+    transition: all 0.35s ease;
+}
+
+.header.scrolled {
+    height: 3.5rem;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.header.scrolled .nav__logo {
+    font-size: 1.15rem;
+}
+
+.header.scrolled .nav__logo i {
+    font-size: 1.3rem;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav__link.active {
+    color: var(--primary);
+    font-weight: 700;
+}
+.hero__badge--alt {
+    transition: all 0.4s ease;
+}
+
+.badge-animate {
+    animation: badgeFade 0.5s ease;
+}
+
+@keyframes badgeFade {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

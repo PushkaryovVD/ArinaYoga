@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YogaLife - Курс преподавателей</title>
+    
+    <link rel="icon" type="image/png" href="assets/lima_bg.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <i class="ri-leaf-fill"></i> YogaLife
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <div class="nav__header-mobile">
+                    <span class="nav__logo-mobile">YogaLife</span>
+                    
+                    <div class="nav__close" id="nav-close" onclick="closeMenu()">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
+                
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#about" class="nav__link" onclick="closeMenu()">О курсе</a></li>
+                    <li class="nav__item"><a href="#benefits" class="nav__link" onclick="closeMenu()">Преимущества</a></li>
+                    <li class="nav__item"><a href="#program" class="nav__link" onclick="closeMenu()">Программа</a></li>
+                    <li class="nav__item"><a href="#teachers" class="nav__link" onclick="closeMenu()">Наставники</a></li>
+                    <li class="nav__item"><a href="#faq" class="nav__link" onclick="closeMenu()">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav__actions">
+                <a href="#contact" class="button button--small nav__btn-desk">Записаться</a>
+                
+                <div class="nav__toggle" id="nav-toggle" onclick="toggleMenu()">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero section">
+        <div class="container hero__container grid">
+            <div class="hero__data">
+                <div class="hero__badges">
+                    <span class="hero__badge"><div id="countdown"></div></span>
+                    
+                    <span class="hero__badge hero__badge--alt"></span>
+                </div>
+                <h1 class="hero__title">
+                    Превратите любовь к йоге<br>в профессию души
+                </h1>
+                <p class="hero__description">
+                    Сертифицированный курс подготовки преподавателей хатха-йоги (YTTC 400 часов). 
+                    Международный стандарт Yoga Alliance. Глубокое погружение в практику и философию.
+                </p>
+                
+                <ul class="hero__list">
+                    <li><i class="ri-check-line"></i> Международный сертификат RYT 200/500</li>
+                    <li><i class="ri-check-line"></i> Помощь в трудоустройстве</li>
+                    <li><i class="ri-check-line"></i> Онлайн и Оффлайн форматы</li>
+                </ul>
+
+                <div class="hero__buttons">
+                    <a href="#program" class="button button--pulse">Смотреть программу</a>
+                    <a href="#teachers" class="button button--ghost">Мастера</a>
+                </div>
+            </div>
+
+            <div class="hero__image-wrapper breathing-animation">
+                <div class="img-placeholder img-placeholder--hero">
+                    <i class="ri-image-add-line"></i>
+                    <span>Главное фото<br>(Девушка в асане)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="benefits">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="section__title">Почему выбирают YogaLife?</h2>
+                <p class="section__subtitle">Мы создали систему, которая работает</p>
+            </div>
+            
+            <div class="grid grid--3-cols">
+                <div class="benefit-card float-card reveal">
+                    <div class="benefit-icon"><i class="ri-global-line"></i></div>
+                    <h3>Международный Диплом</h3>
+                    <p>Наши сертификаты котируются во всем мире. Вы сможете преподавать в Европе, Азии и США.</p>
+                </div>
+                <div class="benefit-card float-card reveal">
+                    <div class="benefit-icon"><i class="ri-briefcase-4-line"></i></div>
+                    <h3>Карьера</h3>
+                    <p>Мы не бросаем выпускников. Лучшие студенты получают приглашение на стажировку.</p>
+                </div>
+                <div class="benefit-card float-card reveal ">
+                    <div class="benefit-icon"><i class="ri-group-line"></i></div>
+                    <h3>Живое комьюнити</h3>
+                    <p>Вы попадаете в среду единомышленников. Закрытые чаты и поддержка 24/7.</p>
+                </div>
+                <div class="benefit-card float-card reveal">
+                    <div class="benefit-icon"><i class="ri-group-line"></i></div>
+                    <h3>Живое комьюнити</h3>
+                    <p>Вы попадаете в среду единомышленников. Закрытые чаты и поддержка 24/7.</p>
+                </div>
+                <div class="benefit-card float-card reveal">
+                    <div class="benefit-icon"><i class="ri-computer-line"></i></div>
+                    <h3>Удобный формат</h3>
+                    <p>Современная онлайн-платформа для теории и живые практические интенсивы.</p>
+                </div>
+                <div class="benefit-card float-card reveal">
+                    <div class="benefit-icon"><i class="ri-book-read-line"></i></div>
+                    <h3>Методология</h3>
+                    <p>Мы учим видеть тело ученика, корректировать правками и вести травмобезопасную практику.</p>
+                </div>
+                <div class="benefit-card float-card reveal">
+                    <div class="benefit-icon"><i class="ri-heart-pulse-line"></i></div>
+                    <h3>Трансформация</h3>
+                    <p>Курс — это глубокая работа над собой, своими привычками и здоровьем.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-soft" id="program">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="section__title">Программа курса (400 часов)</h2>
+                <p class="section__subtitle">Фундаментальное образование</p>
+            </div>
+
+            <div class="program-grid">
+                <div class="program-item float-card">
+                    <span class="program-item__num">01</span>
+                    <h3>История и Философия</h3>
+                    <p class="program-desc">Изучение первоисточников: Йога-сутры Патанджали, Хатха-Йога Прадипика. Яма и Нияма.</p>
+                </div>
+                <div class="program-item float-card">
+                    <span class="program-item__num">02</span>
+                    <h3>Анатомия и Физиология</h3>
+                    <p class="program-desc">Биомеханика суставов. Травмобезопасность. Влияние йоги на гормональную систему.</p>
+                </div>
+                <div class="program-item float-card">
+                    <span class="program-item__num">03</span>
+                    <h3>Отстройка Асан</h3>
+                    <p class="program-desc">Детальный разбор 108 ключевых асан. Геометрия тела. Правки руками (Аджайстмент).</p>
+                </div>
+                <div class="program-item float-card">
+                    <span class="program-item__num">04</span>
+                    <h3>Пранаяма и Медитация</h3>
+                    <p class="program-desc">Физиология дыхания. Основные техники пранаям. Введение в медитацию и mindfulness.</p>
+                </div>
+                <div class="program-item float-card">
+                    <span class="program-item__num">05</span>
+                    <h3>Методика преподавания</h3>
+                    <p class="program-desc">Как строить последовательности. Голос преподавателя. Психология работы с группой.</p>
+                </div>
+                <div class="program-item float-card">
+                    <span class="program-item__num">06</span>
+                    <h3>Личный бренд</h3>
+                    <p class="program-desc">Юридические аспекты. Как набрать первую группу. Ведение соцсетей.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="teachers">
+        <div class="container">
+            <h2 class="section__title text-center">Наставники курса</h2>
+            <div class="teachers-grid mt-4">
+                
+                <div class="teacher-card float-card">
+                    <div class="teacher-card__img-box">
+                        <div class="img-placeholder"><i class="ri-user-smile-line"></i><span>Фото (3:4)</span></div>
+                    </div>
+                    <div class="teacher-card__info">
+                        <h3>Анна Иванова</h3>
+                        <span class="teacher-role">Основатель школы</span>
+                        <p class="teacher-desc">Сертифицированный преподаватель (E-RYT 500). Опыт практики 20 лет.</p>
+                    </div>
+                </div>
+
+                <div class="teacher-card float-card">
+                    <div class="teacher-card__img-box">
+                        <div class="img-placeholder"><i class="ri-user-smile-line"></i><span>Фото (3:4)</span></div>
+                    </div>
+                    <div class="teacher-card__info">
+                        <h3>Сергей Петров</h3>
+                        <span class="teacher-role">Анатомия и терапия</span>
+                        <p class="teacher-desc">Врач-остеопат, йогатерапевт. Автор методики "Здоровая спина".</p>
+                    </div>
+                </div>
+
+                <div class="teacher-card float-card">
+                    <div class="teacher-card__img-box">
+                        <div class="img-placeholder"><i class="ri-user-smile-line"></i><span>Фото (3:4)</span></div>
+                    </div>
+                    <div class="teacher-card__info">
+                        <h3>Елена Сидорова</h3>
+                        <span class="teacher-role">Философия</span>
+                        <p class="teacher-desc">Востоковед, переводчик древних текстов. Делает философию доступной.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section bg-soft">
+        <div class="container grid grid--2-cols align-center">
+            <div>
+                <h2 class="section__title">Документы об окончании</h2>
+                <p class="mb-2">
+                    После успешной сдачи экзаменов вы получаете полный пакет документов, который дает право легально преподавать йогу по всему миру.
+                </p>
+                <ul class="hero__list" style="margin-top: 1rem;">
+                    <li><i class="ri-checkbox-circle-fill"></i> Сертификат YogaLife (Int)</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Регистрация в Yoga Alliance (RYT 200)</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Удостоверение о повышении квалификации</li>
+                </ul>
+            </div>
+            <div class="img-placeholder img-placeholder--rect float-card">
+                <i class="ri-file-paper-2-line"></i>
+                <span>Фото Сертификатов<br>(Горизонтальное)</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="faq">
+        <div class="container max-w-800">
+            
+            <div class="section-header-with-mascot text-center mb-4">
+                <img src="assets/lima_bg.png" alt="Mascot Helper" class="mascot-deco mascot-deco--faq breathing-animation">
+                <div>
+                    <h2 class="section__title">Вопросы и ответы</h2>
+                    <p class="section__subtitle">Я помогу разобраться!</p>
+                </div>
+            </div>
+            
+            <div class="faq__container">
+                <details class="faq-card">
+                    <summary>Подойдет ли мне курс, если я новичок?<span class="faq-icon"><i class="ri-add-line"></i></span></summary>
+                    <div class="faq-content"><p>Да, курс построен по принципу "от простого к сложному". Мы начинаем с самых основ. Главное — ваша мотивация.</p></div>
+                </details>
+
+                <details class="faq-card">
+                    <summary>Как проходит экзамен?<span class="faq-icon"><i class="ri-add-line"></i></span></summary>
+                    <div class="faq-content"><p>Экзамен состоит из теста по теории, проведения практического занятия и собеседования.</p></div>
+                </details>
+
+                <details class="faq-card">
+                    <summary>Есть ли рассрочка оплаты?<span class="faq-icon"><i class="ri-add-line"></i></span></summary>
+                    <div class="faq-content"><p>Конечно. Мы предоставляем беспроцентную внутреннюю рассрочку на 4 платежа.</p></div>
+                </details>
+                
+                 <details class="faq-card">
+                    <summary>Что если я пропущу занятие?<span class="faq-icon"><i class="ri-add-line"></i></span></summary>
+                    <div class="faq-content"><p>Все уроки записываются и доступны в личном кабинете навсегда.</p></div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container grid grid--3-cols">
+            <div class="footer__col">
+                <a href="#" class="nav__logo text-white mb-2"><i class="ri-leaf-fill"></i> YogaLife</a>
+                <p class="footer__text">Пространство осознанности.<br>Обучение инструкторов йоги с 2015 года.</p>
+            </div>
+            
+            <div class="footer__col footer__col--contact">
+                <img src="assets/lima_bg.png" alt="Mascot" class="mascot-deco mascot-deco--footer">
+                <div>
+                    <h4 class="footer__title">Контакты</h4>
+                    <p>+7 (999) 000-00-00</p>
+                    <p>info@yogalife.com</p>
+                    <div class="footer__socials mt-2">
+                        <a href="#"><i class="ri-telegram-fill"></i></a>
+                        <a href="#"><i class="ri-whatsapp-line"></i></a>
+                        <a href="#"><i class="ri-youtube-fill"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__col">
+                <h4 class="footer__title">Информация</h4>
+                <a href="#" class="footer__link">Договор оферты</a><br>
+                <a href="#" class="footer__link">Политика конфиденциальности</a>
+            </div>
+        </div>
+        <div class="footer__copy text-center mt-4">
+            &copy; 2026 YogaLife. Все права защищены.
+        </div>
+    </footer>
+
+    <a href="https://wa.me/79990000000" target="_blank" class="floating-mascot-btn">
+        <div class="mascot-btn-content">
+            <img src="assets/lima_bg.png" alt="Чат WhatsApp" class="mascot-btn-img">
+        </div>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
