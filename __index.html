@@ -9,142 +9,6 @@
     <link rel="icon" type="image/png" href="assets/mascot-hero.png">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        /* --- Стили для Pop-up и обновленной кнопки --- */
-        :root {
-            --gradient-primary: linear-gradient(90deg, #8e2de2, #f00078);
-        }
-
-        /* Плавающая кнопка "ПОДАРОК" */
-        .floating-gift-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: var(--gradient-primary);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
-            z-index: 1000;
-            box-shadow: 0 10px 25px rgba(240, 0, 120, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: none;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-        }
-
-        .floating-gift-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 30px rgba(240, 0, 120, 0.4);
-        }
-
-        .floating-gift-btn i {
-            font-size: 1.5rem;
-        }
-
-        /* Модальное окно (Pop-up) */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            display: none; /* Скрыто по умолчанию */
-            justify-content: center;
-            align-items: center;
-            z-index: 2000;
-            backdrop-filter: blur(5px);
-        }
-
-        .modal-content {
-            background: white;
-            padding: 40px;
-            border-radius: 24px;
-            max-width: 500px;
-            width: 90%;
-            position: relative;
-            text-align: center;
-            animation: modalFadeIn 0.4s ease-out;
-        }
-
-        @keyframes modalFadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: #ccc;
-            transition: color 0.3s;
-        }
-
-        .modal-close:hover {
-            color: #333;
-        }
-
-        .modal-title {
-            color: #8e2de2;
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        .modal-subtitle {
-            font-size: 1.8rem;
-            font-weight: 800;
-            margin-bottom: 15px;
-            color: #2c3e50;
-        }
-
-        .modal-desc {
-            color: #666;
-            line-height: 1.5;
-            margin-bottom: 25px;
-        }
-
-        .modal-btn {
-            background: var(--gradient-primary);
-            color: white;
-            padding: 16px 32px;
-            border-radius: 50px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: bold;
-            font-size: 1rem;
-            transition: opacity 0.3s;
-            border: none;
-            width: 100%;
-            justify-content: center;
-        }
-
-        .modal-btn:hover {
-            opacity: 0.9;
-        }
-
-        /* Анимация пульсации для кнопки */
-        .pulse-animation {
-            animation: pulse-shadow 2s infinite;
-        }
-
-        @keyframes pulse-shadow {
-            0% { box-shadow: 0 0 0 0 rgba(240, 0, 120, 0.4); }
-            70% { box-shadow: 0 0 0 15px rgba(240, 0, 120, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(240, 0, 120, 0); }
-        }
-    </style>
 </head>
 <body>
 
@@ -308,7 +172,6 @@
                         <li class="mb-2">кто хочет идти глубже в практики</li>
                         <li class="mb-2">хочет функциональное выносливое тело</li>
                         <li class="mb-2">спокойный ум и избавиться от тревожности в душе</li>
-                    </ul>
                     <h4 style="font-size: 1rem; color: var(--secondary); margin-top: auto; padding-top: 1rem;">Структура занятия:</h4>
                     <ol style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.5rem; padding-left: 1rem;">
                         <li>Настройка и медитация</li>
@@ -455,6 +318,7 @@
             <h2 class="section__title text-center mb-4">Отзывы учеников</h2>
             
             <div class="reviews-outer-container">
+                
                 <div class="swiper reviews-slider">
                     <div class="swiper-wrapper">
                         
@@ -498,33 +362,19 @@
                             </div>
                         </div>
 
+                        </div>
+                        
+                        <div class="swiper-pagination"></div>
                     </div>
-                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-button-prev review-btn-prev"></div>
+                    <div class="swiper-button-next review-btn-next"></div>
                 </div>
-                <div class="swiper-button-prev review-btn-prev"></div>
-                <div class="swiper-button-next review-btn-next"></div>
             </div>
         </div>
     </section>
 
-    <div class="modal-overlay" id="giftModal">
-        <div class="modal-content">
-            <span class="modal-close" id="closeModal">&times;</span>
-            <div class="modal-title">Ваш подарок от Арины!</div>
-            <div class="modal-subtitle">Онлайн практика</div>
-            <p class="modal-desc">
-                Первая онлайн-практика от Арины для новых учеников абсолютно бесплатно.
-            </p>
-            <a href="https://wa.me/77052707898?text=Здравствуйте!%0A%0AЯ хочу получить подарок: Онлайн практика!" 
-               target="_blank" class="modal-btn">
-                <i class="ri-gift-line"></i> Записаться на бесплатную практику
-            </a>
-        </div>
-    </div>
-
-    <button class="floating-gift-btn pulse-animation" id="openModalBtn">
-        <i class="ri-gift-fill"></i> Подарок!
-    </button>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <footer class="footer section" id="contact" style="padding-top: 4rem;">
         <div class="container text-center max-w-800">
@@ -569,50 +419,36 @@
         </div>
     </footer>
 
+    <a href="https://wa.me/77052707898?text=Здравствуйте!%0A%0AПишу с вашего сайта. Хочу записаться на тренировку!.%0A%0A" target="_blank" class="floating-mascot-btn">
+        <div class="mascot-btn-content">
+            <img src="assets/gift.png" alt="Чат WhatsApp" class="mascot-btn-img">
+        </div>
+    </a>
+
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    
     <script>
-        // --- Инициализация Swiper ---
-        const swiper = new Swiper('.reviews-slider', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            grabCursor: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            breakpoints: {
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 30
-                }
-            }
-        });
-
-        // --- Логика модального окна ---
-        const modal = document.getElementById('giftModal');
-        const openBtn = document.getElementById('openModalBtn');
-        const closeBtn = document.getElementById('closeModal');
-
-        openBtn.onclick = () => {
-            modal.style.display = 'flex';
-        }
-
-        closeBtn.onclick = () => {
-            modal.style.display = 'none';
-        }
-
-        window.onclick = (event) => {
-            if (event.target == modal) {
-                modal.style.display = 'none';
+    const swiper = new Swiper('.reviews-slider', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        grabCursor: true, // Курсор-ручка при наведении
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            // Настройки адаптивности
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30
             }
         }
-    </script>
+    });
+</script>
 </body>
 </html>
